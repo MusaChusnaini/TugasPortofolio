@@ -1,0 +1,286 @@
+:root {
+    --bg-main: #141414;
+    --bg-secondary: #1e1e1e;
+    --text-light: #ffffff;
+    --text-muted: #9ca3af;
+    --accent-blue: #0d6efd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* --- Navigasi --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: var(--bg-main);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-light);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- Typografi Umum --- */
+.link-arrow {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--text-light);
+    padding-bottom: 3px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.section-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5%;
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    max-width: 400px;
+}
+
+.hero-left h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-left p {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.scroll-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-blue);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.scroll-btn:hover {
+    transform: translateY(5px);
+}
+
+.hero-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 300px;
+}
+
+.info-block h3, .social-links h3 {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.info-block p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.icons a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+/* --- About & Stats Section --- */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 5%;
+    background-color: var(--bg-secondary);
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1.5;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.stats {
+    flex: 1;
+    display: flex;
+    gap: 40px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-item h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.stat-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.details-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 5%;
+    background-color: var(--bg-main);
+}
+
+.column {
+    flex: 1;
+}
+
+.column ul {
+    list-style: none;
+}
+
+.column ul li {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left, .hero-center, .hero-right {
+        max-width: 100%;
+    }
+
+    .hero-right {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text p {
+        margin: 0 auto 2rem auto;
+    }
+
+    .stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .details-section {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .stat-item h2 {
+        font-size: 3rem;
+    }
+}
